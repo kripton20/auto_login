@@ -2,8 +2,9 @@
 cd D:/WEB/X7_2_24/htdocs/auto_login/
 
 В отладчике.
-D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 1
-D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0
+D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 1 1,2
+D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 1,2
+D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 1,2
 
 Запуск в консоле Linux с пониженным приоритетом: nice -n 19
 Параметры запуска скрипта:
@@ -18,6 +19,9 @@ nice -n 19 php /home/vmail/auto_login/auto_multi_login.php oc@niiemp.local oc001
 
 Другой экземпляр выполняемый ночью:
 nice -n 19 php /home/vmail/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 6,7,8,9,10 &
+
+Удалим лог работы программы перед запуском.
+rm -frv /home/vmail/auto_login/logs/auto_multi_login.log
 
 Смотрим лог работы программы.
 sh /home/vmail/auto_login/viewing_log_file_auto_login.sh
