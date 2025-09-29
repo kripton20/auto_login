@@ -51,7 +51,7 @@ cp -urv /home/vmail/rc147/skins/larry/ /var/www/roundcubemail-147-47/skins/
 cp -urv /home/vmail/rc147/skins/larry/ /var/www/roundcubemail-147-48/skins/
 cp -urv /home/vmail/rc147/skins/larry/ /var/www/roundcubemail-147-49/skins/
 cp -urv /home/vmail/rc147/skins/larry/ /var/www/roundcubemail-147-50/skins/
-#chown -vR root:root /opt/www/roundcubemail-1.3.6/skins/larry/
+chown -vR root:root /opt/www/roundcubemail-1.3.6/skins/larry/
 chown -vR www-data:www-data /var/www/roundcubemail-147-1/skins/larry/
 chown -vR www-data:www-data /var/www/roundcubemail-147-2/skins/larry/
 chown -vR www-data:www-data /var/www/roundcubemail-147-3/skins/larry/
@@ -102,7 +102,7 @@ chown -vR www-data:www-data /var/www/roundcubemail-147-47/skins/larry/
 chown -vR www-data:www-data /var/www/roundcubemail-147-48/skins/larry/
 chown -vR www-data:www-data /var/www/roundcubemail-147-49/skins/larry/
 chown -vR www-data:www-data /var/www/roundcubemail-147-50/skins/larry/
-#chmod -vR 0755 /opt/www/roundcubemail-1.3.6/skins/larry/
+chmod -vR 0755 /opt/www/roundcubemail-1.3.6/skins/larry/
 chmod -vR 0755 /var/www/roundcubemail-147-1/skins/larry/
 chmod -vR 0755 /var/www/roundcubemail-147-2/skins/larry/
 chmod -vR 0755 /var/www/roundcubemail-147-3/skins/larry/

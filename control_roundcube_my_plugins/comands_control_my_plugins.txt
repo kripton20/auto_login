@@ -1,8 +1,14 @@
 Удалить лог работы плагина rm_duplicate_messages на всех url.
 sh /home/vmail/rc147/control_roundcube_my_plugins/delete_viewing_log_file.sh
 
-Обновить настройки аккаунта на на всех url.
+Обновим настройки аккаунта на на всех url.
 sh /home/vmail/rc147/control_roundcube_my_plugins/updatePreferencesForAllAccaunts.sql
+
+Обновим плагин rm_duplicate_messages на на всех url.
+sh /home/vmail/rc147/control_roundcube_my_plugins/update_rm_duplicate_messages_plagins.sh
+
+Обновим настройки темы оформлкемя Larry.
+sh /home/vmail/rc147/control_roundcube_my_plugins/update_skins_larry.sh
 
 Копирование и редактирование файла config.inc.php на на всех url.
 sh /home/vmail/rc147/control_roundcube_my_plugins/copy_file_config.inc.php.sh
@@ -13,8 +19,7 @@ sh /home/vmail/rc147/control_roundcube_my_plugins/install_roundcube_in_var_www.s
 Редактирование файла rm_duplicate.log на на всех url.
 sh /home/vmail/rc147/control_roundcube_my_plugins/mcedit_rm_duplicate_log.sh
 
-Обновить плагин rm_duplicate_messages на на всех url.
-sh /home/vmail/rc147/control_roundcube_my_plugins/update_rm_duplicate_messages_plagins.sh
+
 
 Смотрим лог работы плагина rm_duplicate_messages в консоле Linux.
 sh /home/vmail/rc147/control_roundcube_my_plugins/viewing_log_file_rm_duplicate_messages.sh

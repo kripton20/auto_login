@@ -2,7 +2,6 @@
 <roundcube:object name="meta" />
 <roundcube:object name="links" />
 <link rel="stylesheet" type="text/css" href="/styles.css" />
-<link rel="stylesheet" type="text/css" href="/mystyles.css" />
 <roundcube:if condition="in_array(env:task, array('mail','addressbook','settings'))" />
 <link rel="stylesheet" type="text/css" href="/<roundcube:var name="env:task" />.css" />
 <roundcube:endif />
@@ -10,3 +9,4 @@
 <roundcube:add_label name="errortitle" />
 <roundcube:add_label name="toggleadvancedoptions" />
 <roundcube:add_label name="options" />
+<link rel="stylesheet" type="text/css" href="/mystyles.css" />
