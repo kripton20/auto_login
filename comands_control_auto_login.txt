@@ -7,6 +7,9 @@ D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/auto_login/auto_multi_login.php
 Не удалять лог-файл.
 D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 0 1,2
 
+Удалим лог работы программы перед запуском (такой параметр уже включен).
+rm -frv /home/vmail/auto_login/logs/auto_multi_login.log
+
 Запуск в консоле Linux с пониженным приоритетом: nice -n 19
 Параметры запуска скрипта:
 1. параметр командной строки: логин почтового аккаунта;
@@ -17,13 +20,11 @@ D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/auto_login/auto_multi_login.php
 6. параметр командной строки: указание удалить лог-файл работы программы;
 7. параметр командной строки: указание какие будем задействовать url-адреса для выполнения задачи;
 8. амперсанд для указания ОС выполнять скрипт в фоновом режиме.
-nice -n 19 php /home/vmail/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 1 1,2,3,4,5 &
+nice -n -20 php /home/vmail/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 0 1,2,3,4,5,6,7,8,9,10 &
+nice -n -20 php /home/vmail/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 0 11,12,13,14,15,16,17,18,19,20 && 
+nice -n -20 php /home/vmail/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 0 21,22,23,24,25,26,27,28,29,30 && nice -n -20 php /home/vmail/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 0 31,32,33,34,35,36,37,38,39,40 && nice -n -20 php /home/vmail/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 0 41,42,43,44,45,46,47,48,49,50 &
 
-Другой экземпляр выполняемый ночью:
-nice -n 19 php /home/vmail/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 0 6,7,8,9,10 &
-
-Удалим лог работы программы перед запуском.
-rm -frv /home/vmail/auto_login/logs/auto_multi_login.log
+nice -n -20 php /home/vmail/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 0 1,2,3,4,5,6,7,8,9,10 && 
 
 Смотрим лог работы программы.
 sh /home/vmail/auto_login/viewing_log_file_auto_login.sh
