@@ -1,0 +1,35 @@
+Для BASH:
+cd D:/WEB/X7_2_24/htdocs/auto_login/
+
+В отладчике.
+Удалить лог-файл.
+D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 1 1,2
+Не удалять лог-файл.
+D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 0 1,2
+
+Запуск в консоле Linux с пониженным приоритетом: nice -n 19
+Параметры запуска скрипта:
+1. параметр командной строки: логин почтового аккаунта;
+2. параметр командной строки: пароль почтового аккаунта;
+3. параметр командной строки: указание какую задачу будет выполнять Roundcube;
+4. параметр командной строки: указание записывать лог-файл;
+5. параметр командной строки: указание записывать отладочную информацию;
+6. параметр командной строки: указание удалить лог-файл работы программы;
+7. параметр командной строки: указание какие будем задействовать url-адреса для выполнения задачи;
+8. амперсанд для указания ОС выполнять скрипт в фоновом режиме.
+nice -n 19 php /home/vmail/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 1 1,2,3,4,5 &
+
+Другой экземпляр выполняемый ночью:
+nice -n 19 php /home/vmail/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 0 6,7,8,9,10 &
+
+Удалим лог работы программы перед запуском.
+rm -frv /home/vmail/auto_login/logs/auto_multi_login.log
+
+Смотрим лог работы программы.
+sh /home/vmail/auto_login/viewing_log_file_auto_login.sh
+
+Смотрим список процессов в Linux.
+ps aux | grep auto_multi_login
+
+Ищем процесс по имени, извлекаем его PID и завершаем его:
+kill `ps aux | grep 'auto_multi_login' | awk '{print $2}'`
