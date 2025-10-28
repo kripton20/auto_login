@@ -1,0 +1,22 @@
+Для BASH:
+cd D:/WEB/X7_2_24/htdocs/auto_login/
+Вотладчике:
+D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 1
+D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0
+D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 20,21,22
+В консоле Linux:
+php /home/vmail/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 1
+С повышеннми правами:
+nice -n 20 php /home/vmail/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 1
+Без отладки:
+nice -n 20 php /home/vmail/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 &
+nice -n 20 php /home/vmail/auto_login_night/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 &
+С указанием url-адресов для обработки:
+nice -n 20 php /home/vmail/auto_login_night/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 1,2,3,4,5 &
+Ночной режим:
+nice -n 20 php /home/vmail/auto_login_night/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request 1 0 6,7,8,9,10 &
+
+Для WEB:
+http://localhost/auto_login/auto_multi_login.php?user=oc@niiemp.local&password=oc0017niiemp&global_task=plugin.msg_request
+http://localhost/auto_login/auto_multi_login.php?user=oc@niiemp.local&password=oc0017niiemp&global_task=plugin.msg_request&log_file=TRUE$debug=TRUE
+
