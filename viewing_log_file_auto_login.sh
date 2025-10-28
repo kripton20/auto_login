@@ -1,6 +1,7 @@
 #!/bin/bash
 # Смотрим лог работы прожения auto_multi_login.
 echo
+
 # Последние 10 строк строк.
 echo "Последние 10 строк строк."
 tail /home/vmail/auto_login/logs/auto_multi_login.log

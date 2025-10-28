@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Для BASH:
 cd D:/WEB/X7_2_24/htdocs/auto_login/
 Вотладчике:
@@ -19,4 +20,33 @@ nice -n 20 php /home/vmail/auto_login_night/auto_multi_login.php oc@niiemp.local
 Для WEB:
 http://localhost/auto_login/auto_multi_login.php?user=oc@niiemp.local&password=oc0017niiemp&global_task=plugin.msg_request
 http://localhost/auto_login/auto_multi_login.php?user=oc@niiemp.local&password=oc0017niiemp&global_task=plugin.msg_request&log_file=TRUE$debug=TRUE
+=======
+Для CMD:
+cd D:/WEB/X7_2_24/htdocs/auto_login/
+D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/auto_login/auto_multi_login.php oc@niiemp.local oc0017niiemp plugin.msg_request
+
+
+Для WEB:
+http://localhost/auto_login/auto_multi_login.php?login=oc@niiemp.local&password=oc0017niiemp&global_task=plugin.msg_request
+
+
+Так передаются файлы:
+find D:/WEB/X7_2_24/htdocs/find_msg/cur | xargs -I lst  D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/find_msg/test.php lst
+
+Так передаются файлы и дополнительные аргументы:
+find D:/WEB/X7_2_24/htdocs/find_msg/cur | xargs -I lst  D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/find_msg/test.php noreply@team.e-mba.ru lst
+
+Так передаются файлы и дополнительные аргументы:
+Несколько условий.
+Логическое ИЛИ. 
+Более компактный вид имеют регулярные выражения, например:
+find . -regex '.*//(sess_.*cd/)'
+find . -regex '(.*cadmail.*|.*server.*)'
+
+find /home/vmail/tasks/cur/  -regex '(.*cadmail.*|.*server.*)'
+find /home/vmail/tasks/cur/ -name "*cadmail*" -o -name "*server*"
+
+find D:/WEB/X7_2_24/htdocs/find_msg/cur | xargs -I lst  D:/WEB/X7_2_24/php/php.exe D:/WEB/X7_2_24/htdocs/find_msg/test.php noreply@team.e-mba.ru lst
+
+>>>>>>> 72203ad... Окончательный рабочий вариант для отправки на сервер.
 
